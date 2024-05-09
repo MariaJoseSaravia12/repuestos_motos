@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block ver_productos %}
+
+
+<div class="container">
+  <h1>Productos</h1>
+  <div class="row">
+    {% for producto in productos %}
+    <div class="col-12 col-md-4 mb-4">  <!-- Ajusta la clase de columna según tus necesidades -->
+      <div class="card h-100">  <!-- Establece una altura consistente para las tarjetas -->
+        <img src="/media/{{producto.imagen}}" class="card-img-top" alt="Imagen de {{producto.producto}}">
+        <div class="card-body">
+          <h5 class="card-title">{{producto.producto}}</h5>
+          <p class="card-text">Estado: {{producto.estado}}</p>
+          <p class="card-text">Precio: {{producto.precio}} $</p>
+          <p class="card-text">Stock: {{producto.stock}} u.</p>
+          <a href="" class="btn-close" aria-label="Close" style="position: absolute; bottom: 0; right: 0;"></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+
+

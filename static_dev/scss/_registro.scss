@@ -1,0 +1,59 @@
+form {
+    width: 100%;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid $color-formulario;
+    border-radius: 5px;
+
+    #id_username, #id_email, #id_password1, #id_password2, #id_nombre, #id_apellido, #id_fecha_nacimiento, #id_pais, #id_provincia, #id_ciudad, #id_telefono, #id_documento {
+      color: $color_text;
+      display: block; 
+      margin-bottom: 5px;
+    }
+    label{
+      display: block;
+      width: 100%;
+      color: $color_text
+    }
+    input {
+      color: $color_text;
+      width: 100%; 
+      margin-bottom: $margin-vertical;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: block;
+    }
+      
+    textarea {
+      color: $color_text;
+      width: 100%; 
+      margin-bottom: $margin-vertical;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: block;
+      
+    }
+    span  {
+      color: $color_text;
+      visibility: hidden;
+    }
+  /* Estilo para ocultar el span */
+     .helptext {
+       display: none;
+     }
+     
+     /* Estilo para mostrar el span */
+     .helptext.visible {
+       display: inline;
+     }
+
+    img.captcha {
+      
+      height: 25%;
+      
+    }  
+}

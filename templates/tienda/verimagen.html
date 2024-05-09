@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block tienda %}
+
+<div class="container" style="margin-top: 90px; text-align: center;   
+padding: 20px;color: rgb(2, 43, 2);">
+  <h1>El id de la imagen es: {{producto.id}}</h1>
+</div>
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+ 
+  <div class="col-12 col-md-4 mb-6">
+    
+    <div class="card h-100 border-0">
+      <img src="/media/{{producto.imagen}}" class="card-img-top" alt="moto en velocidad" height="300px">
+      <div class="card-body">
+        <h5 class="card-title">{{producto.estado}}</h5>  
+        <p class="card-text">{{producto.producto}}</p>
+      <p class="card-text">{{producto.descripcion}}</p>
+      <p class="card-text">${{producto.precio}}</p>       
+      <a href="{% url 'verimagenes' %}" class="btn btn-dark btn-sm">Volver</a>
+      </div>
+    </div>
+  </div>
+ 
+{% endblock %}   

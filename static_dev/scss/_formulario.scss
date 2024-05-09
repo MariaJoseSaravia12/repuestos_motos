@@ -1,0 +1,55 @@
+section {
+  
+    padding-top:50px;    
+      
+}
+
+.container {
+  .row {
+    justify-content:center;
+      .col-12 {
+        padding-top: 50px; 
+        h1 {
+          text-align: center;
+          color: $color1;
+        }
+
+    }
+  }
+}
+   
+#form_cargar {
+          label {
+            width: 100%;
+            color: $color_text;
+          }           
+            
+          #id_producto, #id_fecha_publicacion, #id_imagen   {
+            width: 100%;          
+          }
+
+        }
+           
+
+
+#contact {   	
+  .form-group {
+    label{
+      width: 100%;
+      color: $color_text;
+     
+    }
+  #id_nombre, #id_descripcion, #id_mail, #id_telefono {
+      width: 100%;
+      padding: 5px;
+  
+  
+}
+               
+}
+
+}
+   
+#form_cargar input[type='submit'] {
+  margin-top: 20px; /* Ajusta este valor según el espacio que desees */
+}

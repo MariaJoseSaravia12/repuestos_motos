@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% load static %}
+{% load mi_tienda %}
+
+{% block tienda %}
+
+
+<div class="titulo ">
+  <h1 class="texto">Tienda de Productos</h1>
+</div>
+<article>
+  <div class="row justify-content-center">
+    {% for producto in productos %}
+    <div class="col-12 col-md-4 ">
+      <div class="card h-100 border-0">
+        <img src="/media/{{producto.imagen}}" class="card-img-top" alt="moto en velocidad">
+        <div class="card-body">
+          <h5 class="card-title">{{producto.producto}}</h5>
+          <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
+          <p class="card-text">${{producto.precio}}</p>
+          {% if request.session.el_pedido %}
+          <span>{{producto|en_pedido:request.session.el_pedido}}</span>
+          {% endif %}
+          <hr />
+          <!--Boton para agregar producto-->
+          <form action="{% url 'verimagenes' %}" method="post" style="border:none">{% csrf_token %}
+            <input hidden type="text" name="producto" value="{{producto.id}}" />
+            <input type="submit" class="btn btn-dark btn-sm" value="Agregar" />
+          </form>
+
+
+
+          <a href="{% url 'ver' producto.id %}" class="btn btn-dark btn-sm">Ver</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</article>
+
+
+
+{% endblock %}

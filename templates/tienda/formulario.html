@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block tienda %}
+ 
+<section class="container-fluid">
+  <div class="row">
+      <div class="col-12" style="padding:0px;  ">
+         <br/> 
+      </div>
+  </div>
+</section>
+ <div class="container">
+  <div class="row ">
+    <div class="col-12">
+      <h1>Mi tienda</h1>
+    </div>
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+      <form id="form_cargar" action="/tienda/cargar/" method="post" enctype="multipart/form-data">{% csrf_token %}        
+          <label for="id_producto">Producto</label>             
+            <input type="text" name="producto" maxlength="200" required=""  id="id_producto">
+          <label for="id_fecha_publicacion">Fecha de publicación</label>             
+            <input type="date" name="fecha_publicacion" required="" id="id_fecha_publicacion">
+          <label for="id_imagen">Imagen</label>   
+            <input type="file" name="imagen" accept="image/*" id="id_imagen">
+            <input class="btn btn-dark btn-sm" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+ </div>
+
+
+{% endblock %}   
+{% block scripts %} 
+   <script src="{% static 'js/jqerry.js' %}"></script>
+   <script>
+    $("#id_fecha_publicacion").datepicker({
+      inline: true
+    });
+   </script>
+{% endblock %}
+   
+
+   

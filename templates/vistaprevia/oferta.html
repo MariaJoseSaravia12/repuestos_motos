@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block contenedor %}
+
+<section>
+  <div class="container">  
+    <div class="col">
+    <h1 class="texto-oferta">Ofertas Especiales</h1> 
+    <div class="row">
+      {% for producto in producto|slice:"0:6" %}
+      <div class="col-12 col-md-3 mx-4 mb-5">
+        <div class="card h-100 border-0 mt-5 hover-zoom">
+          <img src="/media/{{producto.imagen}}" class="card-img-top" alt=""/>
+          <div class="card-body">
+            <h5 class="card-title">{{producto.estado}}</h5>
+            <p class="card-text">{{producto.producto}}</p>
+            <p class="card-text">{{producto.descripcion}}</p>
+            <p class="card-text">${{producto.precio}}</p>
+            <a href="{% url 'ver' producto.id %}" class="btn btn-dark btn-sm" data-mdb-ripple-init>Ver</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,135 @@
+body {
+  margin:0;
+  padding:0;
+  background-color: $color_body ;
+  height: 50vh; 
+  display: flex; 
+  flex-direction: column; 
+  
+}
+/*Barra de navegacion*/
+.navbar-brand,.title{ 
+  color: $color1;
+}
+/*Estilos del logo*/
+.custom-container {
+  padding: 10px;
+}
+
+div.custom-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.double-stripe {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  height: 10px; 
+  background-color: $color1; 
+  z-index: -1; 
+}
+/*Estilos de caroseul*/
+.my-custom-carousel-caption {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $color_text !important;
+    width: 100%; 
+   
+} 
+.carousel-inner {
+  position: relative; 
+}
+
+.overlay-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:$transparencia;
+  padding: 4vw;
+  border: 1px solid $color_text;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 70%; 
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+}
+@media screen and (max-width: 576px) {
+  .overlay-box {
+    padding: 10px; 
+    font-size: 1rem; 
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .overlay-box {
+    padding: 40px; 
+    font-size: 2rem; 
+  }
+}
+/*estilos del logo*/
+.logo-container {
+  z-index: 1;
+}
+
+.logo-container img {
+  max-width: 60px; 
+  display: block;
+  margin: 0 auto;
+}
+/*Estilos el boton de las cards*/
+.btn-dark{
+  background-color: $btn_color ;
+  border-color: none;
+  color: $color_texto;
+}
+.btn-dark:hover {
+  background-color: $btn_hover; 
+  border-color: $btn_hover;
+}
+.card.h-100.border-0 {
+  background-color: $btn_border;
+}
+
+
+main {
+  margin:30px;
+}
+footer {
+  margin-top: 80px;
+}
+/*Footer*/
+.bg-custom-color {
+  background-color: $color1;  
+}
+.text-white.bg-custom-color.text-reset {
+  color: $color_texto !important;
+}
+.card-img-top {
+  height: 350px;
+  width: 100%;
+}
+.card-body h5, .card-body p {
+  width: 100%;  
+  margin: 0;    
+}
+.logo-container {
+  display: flex;
+  position: absolute;
+  top: 0px; 
+  right: 0px;
+}

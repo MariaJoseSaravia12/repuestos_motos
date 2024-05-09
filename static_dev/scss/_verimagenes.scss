@@ -1,0 +1,26 @@
+.texto {
+      margin-top: 90px;  
+      text-align: center;   
+      padding: 20px;   
+      color: $color1; 
+    }
+  
+article {
+    .row {
+       justify-content: center;
+       margin: 30px;
+    .card-img-top {
+        height: $card_height;
+       } 
+    
+    .card-title{
+        color:$color1;
+        text-align: center;
+            }
+    .card-text{
+        color: $color_text;
+            }      
+          }
+
+    
+}

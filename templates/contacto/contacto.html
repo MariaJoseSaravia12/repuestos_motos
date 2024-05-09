@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block title %}Contacto{% endblock %}
+{% load static %}
+{% load i18n %}
+{% block contacto %}
+
+<section class="container">
+    <div class="row">
+        <div class="col-12">          
+        </div>
+    </div>
+</section>
+ 
+</div>      
+ <div class="container-fluid">
+    <div class="row">   
+        <div class="col-12 col-md-4 ">
+            <h1>Contacto</h1>   
+            <form id="contact" action="" method="post" class="col-xs-12">{% csrf_token %} 		
+                <div class="col-12 form-group" >
+                    {{form }}
+                </div> 
+                <div class="row justify-content-between">
+                    <div class="col-4"></div>
+                    
+                    <div class="col-4" >
+                        <button type="submit"  class="button btn btn-dark btn-sm">Enviar</button>
+                    </div>
+                </div>                        
+            </form>
+        </div>    
+         
+     </div>
+ </div>  
+
+{% endblock %}
+{% block scripts %} 
+   <script src="{% static 'js/jqerry.js' %}"></script>
+   <script>
+    const helptext = document.querySelector('.helptext');
+    
+    // Función para ocultar el span
+    function ocultarAyuda() {
+        helptext.classList.remove('visible');
+    }
+    
+    // Función para mostrar el span
+    function mostrarAyuda() {
+        helptext.classList.add('visible');
+    }
+    
+    
+    
+    </script>
+   
+{% endblock %}
+
+
+
+

@@ -1,0 +1,45 @@
+
+section {
+  .row{
+    padding-top:70px;
+  }  
+   .col-12{
+    padding: 20px;
+
+   }
+      
+}    
+.container-fluid{
+  .row {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+      .col-12  {
+        padding-bottom:15px;
+      }
+          h1 {
+            padding:15px;
+            color: $color1;
+            text-align: center;
+
+          }
+            
+
+          }
+      }
+
+#contact {   	
+  .form-group {
+    label{
+      width: 100%;
+      color: $color_text
+    }
+    #id_nombre, #id_descripcion, #id_mail, #id_telefono {
+      width: 100%;
+    }
+  
+}
+               
+}
+

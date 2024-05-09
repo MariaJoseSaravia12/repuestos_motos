@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "variables.css",
+	"sources": [
+		"../scss/variables.scss"
+	],
+	"sourcesContent": [
+		"\n/*colores*/\n$color_body: #9b8f8023;\n$color1: #184D59;\n$color_text: #042940;\n$transparencia:  rgba(255, 255, 255, 0.301);\n$btn_color: #184D59;\n$btn_hover:#836502;\n$btn_border:#9b8f801a;\n$card_shadow: rgba(0, 0, 0, 0.3);\n$color_texto: rgb(255, 255, 255)\n \n/*fonts*/\n\n  "
+	],
+	"names": [],
+	"mappings": "AACA,WAAW;AAWX,SAAS"
+}

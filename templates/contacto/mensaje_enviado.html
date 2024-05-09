@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}MENSAJE ENVIADO{% endblock %}
+{% load static %}
+{% load i18n %}
+{% block contacto %}
+<section class="container-fluid ">
+    <div class="row" style="padding-top:50px; ">
+        <div class="col-12" style="padding:0px;  ">
+           <br/> 
+        </div>
+    </div>
+</section>
+ 
+<div class="container-fluid">
+    <div class="row reflexion ">   
+        <div class="col-8">
+            <div>
+                
+                    <h1 >RECIBIMOS TU CONSULTA!<i class="fas fa-star"></i></h1>
+                    <p>En breve nos vamos a contactar!</p>
+                    <p>Mientras tanto te invitamos a ver todos nuestros productos en la <a href="{% url 'index' %}">tienda</a></p>
+ 
+                   
+            </div>
+        </div>  
+     </div>
+ </div>
+  
+
+    
+<section class="container-fluid ">
+    <div class="row" >
+        <div class="col-12">       
+        </div>
+    </div>
+</section>
+   
+  
+
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+.icono {
+  position: fixed;
+  display: flex; /* Establece el layout como flexbox */
+  align-items: center; /* Centra verticalmente los elementos */
+  width: 120px;
+  height: 50px;
+  background-color: rgb(159, 241, 7);
+  border: black solid 2px;
+  bottom: 200px;
+  right: 0px;
+}
+.cel {
+  margin-left: 0px; 
+}
